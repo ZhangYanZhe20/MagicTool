@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_back"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <!-- 连接设置 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/ipEdit"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:hint="机器人 IP"
+            android:text="192.168.54.110"/>
+        <Button
+            android:id="@+id/testBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="连接"/>
+    </LinearLayout>
+
+    <!-- Master 选择 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Master ID:"
+            android:textStyle="bold"/>
+        <RadioGroup
+            android:id="@+id/masterGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton android:id="@+id/m0" android:text="0-下半身" android:layout_height="30dp" android:layout_width="120dp"/>
+            <RadioButton android:id="@+id/m1" android:text="1-上半身" android:checked="true" android:layout_height="30dp" android:layout_width="120dp"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <!-- 控制按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="match_parent"/>
+        <Button
+            android:id="@+id/stopServiceBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="停止运控"
+            android:backgroundTint="#8b2500"/>
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="match_parent"/>
+        <Button
+            android:id="@+id/startWizardBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始标零"
+            android:enabled="false"
+            android:backgroundTint="#2d5a27"/>
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="match_parent"/>
+        <Button
+            android:id="@+id/stopWizardBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中止标零"
+            android:enabled="false"
+            android:backgroundTint="#888888"/>
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="match_parent"/>
+        <Button
+            android:id="@+id/restartServiceBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重启运控"
+            android:backgroundTint="#1a5276"/>
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <!-- 服务状态显示 -->
+    <TextView
+        android:id="@+id/serviceStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="运控状态: 未知"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Slave 按钮网格 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Slave 标零 (点击发送 ID)"
+        android:layout_marginTop="8dp"/>
+    <GridLayout
+        android:id="@+id/slaveGrid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="7"
+        android:rowCount="3"/>
+
+    <!-- 终端输出区域 -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp">
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/terminalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#0c0c0c"
+                android:textColor="#cccccc"
+                android:typeface="monospace"
+                android:textSize="12sp"
+                android:padding="4dp"/>
+        </HorizontalScrollView>
+    </ScrollView>
+
+    <!-- 状态栏 -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="就绪"
+        android:gravity="center"
+        android:textColor="#888888"
+        android:layout_marginTop="4dp"/>
+</LinearLayout>

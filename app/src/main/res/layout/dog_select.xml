@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".ui.notifications.dog_select">
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_back"
+            android:layout_gravity="center_horizontal"
+            />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:spacing="8dp">
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="match_parent"/>
+        <Button
+            android:id="@+id/btn_dog_sn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="机器狗SN"/>
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="match_parent"/>
+        <Button
+            android:id="@+id/btn_dog_version"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="机器狗版本"/>
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:spacing="8dp">
+
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="match_parent"/>
+        <Button
+            android:id="@+id/btn_dog_bt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="重启蓝牙"/>
+        <Space
+            android:layout_width="12dp"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/dog_result_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="50dp"
+        android:background="#F5F5F5"
+        android:padding="8dp"
+        android:textSize="14sp"
+        android:textColor="#212121"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"/>
+
+</LinearLayout>

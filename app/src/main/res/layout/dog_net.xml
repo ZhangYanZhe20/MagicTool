@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_back"
+            android:layout_gravity="center_horizontal"
+            />
+        <!-- 主机 IP（仅此项可修改） -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="主机 IP"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/et_host"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="主机 IP"
+            android:text="192.168.55.200" />
+
+        <!-- Wi‑Fi 操作区域 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Wi‑Fi 操作"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- 第一行按钮 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/btn_scan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="扫描附近" />
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:id="@+id/btn_current"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="当前连接" />
+
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <!-- 第二行按钮：已保存网络 / 断开连接 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="match_parent"/>
+            <Button
+                android:id="@+id/btn_saved"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="已保存网络" />
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="match_parent"/>
+            <Button
+                android:id="@+id/btn_disconnect"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="断开连接" />
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <!-- SSID 和密码输入 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/et_ssid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="SSID" />
+
+            <EditText
+                android:id="@+id/et_passphrase"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="密码（无密码留空）" />
+        </LinearLayout>
+
+        <!-- 第三行按钮：连接 / 删除 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="match_parent"/>
+            <Button
+                android:id="@+id/btn_connect"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="连接" />
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="match_parent"/>
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="删除" />
+            <Space
+                android:layout_width="12dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <!-- 结果展示 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="操作结果："
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:background="#F0F0F0"
+            android:minHeight="150dp"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:typeface="monospace" />
+    </LinearLayout>
+</ScrollView>
